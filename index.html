@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>MapQuest Brownbag - Angular Components</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -24,8 +24,63 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+
+				<section>
+					<h1>Angular Components</h1>
+				</section>
+
+				<section>
+					<h2>Web Components</h2>
+
+					<ul>
+						<li class="fragment" data-fragment-index="1">Reusable components for web applications</li>
+						<li class="fragment" data-fragment-index="2">
+							<a href="https://www.w3.fragment-org/wiki/WebComponents/">W3C</a>
+						</li>
+						<li class="fragment" data-fragment-index="3">Custom Elements</li>
+						<li class="fragment" data-fragment-index="3">Shadow DOM</li>
+						<li class="fragment" data-fragment-index="3">HTML Imports</li>
+						<li class="fragment" data-fragment-index="3">HTML Templates</li>
+						<li class="fragment" data-fragment-index="4"><em>Encapsulation</em></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Angular 1: Directives</h2>
+
+					<p>Powerful, but complex</p>
+					<pre><code data-trim data-noescape>
+myModule.directive('directiveName', function factory(injectables) {
+  var directiveDefinitionObject = {
+    priority: 0,
+    template: '&lt;div&gt;&lt;/div&gt;',
+    transclude: false,
+    restrict: 'A',
+    templateNamespace: 'html',
+    scope: false,
+    controller: function($scope, $element, $attrs, $transclude, otherInjectables) { ... },
+    controllerAs: 'stringIdentifier',
+    bindToController: false,
+    require: 'siblingDirectiveName',
+    compile: function compile(tElement, tAttrs, transclude) {
+      return {
+        pre: function preLink(scope, iElement, iAttrs, controller) { ... },
+        post: function postLink(scope, iElement, iAttrs, controller) { ... }
+      };
+    },
+  };
+  return directiveDefinitionObject;
+});
+					</code></pre>
+				</section>
+
+				<section>
+					<h1>Angular 2</h1>
+
+					<p class="fragment">Components are the main primitive from which user interfaces are built.</p>
+					<p class="fragment">Attribute directives attach behavior to elements.</p>
+				</section>
+
 			</div>
 		</div>
 
