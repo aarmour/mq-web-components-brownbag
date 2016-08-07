@@ -1,61 +1,61 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>MapQuest Brownbag - Angular Components</title>
+    <title>MapQuest Brownbag - Angular Components</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
 
-				<section>
-					<h1>Angular Components</h1>
-				</section>
+        <section>
+          <h1>Angular Components</h1>
+        </section>
 
-				<section>
-					<h2>Web Components</h2>
+        <section>
+          <h2>Web Components</h2>
 
-					<ul>
-						<li class="fragment" data-fragment-index="1">Reusable components for web applications</li>
-						<li class="fragment" data-fragment-index="2">
-							<a href="https://www.w3.fragment-org/wiki/WebComponents/">W3C</a>
-						</li>
-						<li class="fragment" data-fragment-index="3">Custom Elements</li>
-						<li class="fragment" data-fragment-index="3">Shadow DOM</li>
-						<li class="fragment" data-fragment-index="3">HTML Imports</li>
-						<li class="fragment" data-fragment-index="3">HTML Templates</li>
-						<li class="fragment" data-fragment-index="4"><em>Encapsulation</em></li>
-					</ul>
-				</section>
+          <ul>
+            <li class="fragment" data-fragment-index="1">Reusable components for web applications</li>
+            <li class="fragment" data-fragment-index="2">
+              <a href="https://www.w3.fragment-org/wiki/WebComponents/">W3C</a>
+            </li>
+            <li class="fragment" data-fragment-index="3">Custom Elements</li>
+            <li class="fragment" data-fragment-index="3">Shadow DOM</li>
+            <li class="fragment" data-fragment-index="3">HTML Imports</li>
+            <li class="fragment" data-fragment-index="3">HTML Templates</li>
+            <li class="fragment" data-fragment-index="4"><em>Encapsulation</em></li>
+          </ul>
+        </section>
 
-				<section>
-					<h2>Angular 1: Directives</h2>
+        <section>
+          <h2>Angular 1: Directives</h2>
 
-					<p>Extend the DOM with custom elements and attributes</p>
-				</section>
+          <p>Extend the DOM with custom elements and attributes</p>
+        </section>
 
-				<section>
-					<h2>Angular 1: Directives</h2>
+        <section>
+          <h2>Angular 1: Directives</h2>
 
-					<p>Powerful, but complex</p>
-					<pre><code data-trim data-noescape>
+          <p>Powerful, but complex</p>
+          <pre><code data-trim data-noescape>
 myModule.directive('directiveName', function factory(injectables) {
   var directiveDefinitionObject = {
     priority: 0,
@@ -77,55 +77,55 @@ myModule.directive('directiveName', function factory(injectables) {
   };
   return directiveDefinitionObject;
 });
-					</code></pre>
-				</section>
+          </code></pre>
+        </section>
 
-				<section>
-					<h2>Angular 2</h2>
+        <section>
+          <h2>Angular 2</h2>
 
-					<p class="fragment">Components are the main primitive from which user interfaces are built.</p>
-					<p class="fragment">Attribute directives attach behavior to elements.</p>
-				</section>
+          <p class="fragment">Components are the main primitive from which user interfaces are built.</p>
+          <p class="fragment">Attribute directives attach behavior to elements.</p>
+        </section>
 
-				<section>
-					<h2>Angular 1: Component</h2>
+        <section>
+          <h2>Angular 1: Component</h2>
 
-					<p class="fragment">Added in 1.5 to make the transition to Angular 2 easier.</p>
-					<p class="fragment">Syntactic sugar for creating component directives.</p>
-				</section>
+          <p class="fragment">Added in 1.5 to make the transition to Angular 2 easier.</p>
+          <p class="fragment">Syntactic sugar for creating component directives.</p>
+        </section>
 
-				<section>
-					<h2>Angular 1: Component</h2>
+        <section>
+          <h2>Angular 1: Component</h2>
 
-					<ul>
-						<li>
-							Restricted to elements. Continue to use <code>directive</code> for things
-							that modify an existing DOM element.
-						</li>
-						<li class="fragment">Defaults <code>controllerAs</code> to <code>$ctrl</code></li>
-						<li class="fragment">Binds inputs to the controller by default (<code>bindToController: true</code>)</li>
-					</ul>
-				</section>
+          <ul>
+            <li>
+              Restricted to elements. Continue to use <code>directive</code> for things
+              that modify an existing DOM element.
+            </li>
+            <li class="fragment">Defaults <code>controllerAs</code> to <code>$ctrl</code></li>
+            <li class="fragment">Binds inputs to the controller by default (<code>bindToController: true</code>)</li>
+          </ul>
+        </section>
 
-			</div>
-		</div>
+      </div>
+    </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        history: true,
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
 </html>
