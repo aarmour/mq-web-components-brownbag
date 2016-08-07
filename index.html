@@ -48,6 +48,12 @@
 				<section>
 					<h2>Angular 1: Directives</h2>
 
+					<p>Extend the DOM with custom elements and attributes</p>
+				</section>
+
+				<section>
+					<h2>Angular 1: Directives</h2>
+
 					<p>Powerful, but complex</p>
 					<pre><code data-trim data-noescape>
 myModule.directive('directiveName', function factory(injectables) {
@@ -75,10 +81,30 @@ myModule.directive('directiveName', function factory(injectables) {
 				</section>
 
 				<section>
-					<h1>Angular 2</h1>
+					<h2>Angular 2</h2>
 
 					<p class="fragment">Components are the main primitive from which user interfaces are built.</p>
 					<p class="fragment">Attribute directives attach behavior to elements.</p>
+				</section>
+
+				<section>
+					<h2>Angular 1: Component</h2>
+
+					<p class="fragment">Added in 1.5 to make the transition to Angular 2 easier.</p>
+					<p class="fragment">Syntactic sugar for creating component directives.</p>
+				</section>
+
+				<section>
+					<h2>Angular 1: Component</h2>
+
+					<ul>
+						<li>
+							Restricted to elements. Continue to use <code>directive</code> for things
+							that modify an existing DOM element.
+						</li>
+						<li class="fragment">Defaults <code>controllerAs</code> to <code>$ctrl</code></li>
+						<li class="fragment">Binds inputs to the controller by default (<code>bindToController: true</code>)</li>
+					</ul>
 				</section>
 
 			</div>
